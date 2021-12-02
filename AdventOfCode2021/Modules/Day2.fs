@@ -1,10 +1,8 @@
 ﻿namespace AdventOfCode2021
-open Common.InputReader
+
 open System.Text.RegularExpressions
 
 module Day2 =
-    let input = readFile @"inputs\Input2.txt"
-
     type Movement =
         | Up of int
         | Down of int

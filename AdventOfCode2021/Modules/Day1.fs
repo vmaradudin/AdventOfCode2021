@@ -1,8 +1,6 @@
 ﻿namespace AdventOfCode2021
-open Common.InputReader
 
 module Day1 =
-    let input = readFile @"inputs\Input1.txt" |> toInt
 
     let compute (a:int, b:int) = if a < b then 1 else 0
     
