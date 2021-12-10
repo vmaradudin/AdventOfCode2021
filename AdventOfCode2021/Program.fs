@@ -52,3 +52,8 @@ printfn "Day 9"
 InputReader.readFile @"inputs\Input9.txt"
 |> fun i -> Day9.puzzle1 i, Day9.puzzle2 i
 ||> printfn "Puzzle 1: %d   Puzzle 2: %d"
+
+printfn "Day 10"
+InputReader.readFile @"inputs\Input10.txt"
+|> fun i -> Day10.puzzle1 i, Day10.puzzle2 i
+||> printfn "Puzzle 1: %d   Puzzle 2: %d"
