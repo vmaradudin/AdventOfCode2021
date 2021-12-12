@@ -2,7 +2,7 @@
 
 open System
 
-module Day7 =
+module Day07 =
 
     let setup (line:string) =
         line.Split([|","|], StringSplitOptions.RemoveEmptyEntries)

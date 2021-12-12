@@ -1,9 +1,9 @@
 namespace AdventOfCode2021.Tests
 
 open Xunit
-open AdventOfCode2021.Day9
+open AdventOfCode2021.Day09
 
-module Day9Tests =
+module Day09Tests =
 
     let testInput = [|
         "2199943210"

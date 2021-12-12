@@ -2,7 +2,7 @@
 
 open Common.Tools
 
-module Day9 =
+module Day09 =
 
     let setup (lines:string[]) =
         lines

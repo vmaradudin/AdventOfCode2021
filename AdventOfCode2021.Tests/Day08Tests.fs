@@ -1,9 +1,9 @@
 namespace AdventOfCode2021.Tests
 
 open Xunit
-open AdventOfCode2021.Day8
+open AdventOfCode2021.Day08
 
-module Day8Tests =
+module Day08Tests =
 
     let testInput = [|
         "be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe";

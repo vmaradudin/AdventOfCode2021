@@ -2,7 +2,7 @@
 
 open System
 
-module Day4 =
+module Day04 =
     let setupGame (lines:string[]) =
         lines
         |> fun file -> Array.head file, Array.tail file

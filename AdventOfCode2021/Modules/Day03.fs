@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2021
 
-module Day3 =
+module Day03 =
     let toInt c =
         if c ='1' then 1 else 0
     

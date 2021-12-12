@@ -7,35 +7,19 @@
 
   <ItemGroup>
     <Compile Include="CommonModules\Common.fs" />
-    <Compile Include="Modules\Day1.fs" />
-    <Compile Include="Modules\Day2.fs" />
-    <Compile Include="Modules\Day3.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modules\Day4.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modules\Day5.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modules\Day6.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modules\Day7.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modules\Day8.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modules\Day9.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modules\Day10.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modules\Day11.fs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
+    <Compile Include="Modules\Day01.fs" />
+    <Compile Include="Modules\Day02.fs" />
+    <Compile Include="Modules\Day03.fs" />
+    <Compile Include="Modules\Day04.fs" />
+    <Compile Include="Modules\Day05.fs" />
+    <Compile Include="Modules\Day06.fs" />
+    <Compile Include="Modules\Day07.fs" />
+    <Compile Include="Modules\Day08.fs" />
+    <Compile Include="Modules\Day09.fs" />
+    <Compile Include="Modules\Day10.fs" />
+    <Compile Include="Modules\Day11.fs" />
+    <Compile Include="Modules\Day12.fs" />
+    <Compile Include="Program.fs" />
     <Content Include="Inputs\Input1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -69,7 +53,9 @@
     <Content Include="Inputs\Input11.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Compile Include="Program.fs" />
+    <Content Include="Inputs\Input12.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

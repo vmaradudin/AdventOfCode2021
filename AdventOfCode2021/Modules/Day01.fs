@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2021
 
-module Day1 =
+module Day01 =
 
     let compute (a:int, b:int) = if a < b then 1 else 0
     

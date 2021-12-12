@@ -2,7 +2,7 @@
 
 open System.Text.RegularExpressions
 
-module Day2 =
+module Day02 =
     type Movement =
         | Up of int
         | Down of int

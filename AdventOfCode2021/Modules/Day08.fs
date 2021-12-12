@@ -2,7 +2,7 @@
 
 open System
 
-module Day8 =
+module Day08 =
 
     let setup (lines:string[]) =
         lines|> 

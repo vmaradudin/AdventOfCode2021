@@ -2,7 +2,7 @@
 
 open System.Text.RegularExpressions
 
-module Day5 =
+module Day05 =
 
     let coordRegex = Regex("(?<x1>\d+),(?<y1>\d+) -> (?<x2>\d+),(?<y2>\d+)")
 
