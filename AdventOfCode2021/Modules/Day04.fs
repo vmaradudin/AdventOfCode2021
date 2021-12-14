@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode2021
 
 open System
+open Common.Types
 
 module Day04 =
     let setupGame (lines:string[]) =
@@ -66,3 +67,5 @@ module Day04 =
         |||> play 
         ||> fun cards step -> (cards |> Seq.find (fun c -> c |> snd) |> fst |> fst), step
         ||> fun winnerCard step -> (calculateSum winnerCard) * step
+
+    let Solution = new Solution(4, puzzle1, puzzle2)

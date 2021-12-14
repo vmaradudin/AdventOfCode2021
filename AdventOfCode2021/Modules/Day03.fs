@@ -1,5 +1,7 @@
 ﻿namespace AdventOfCode2021
 
+open Common.Types
+
 module Day03 =
     let toInt c =
         if c ='1' then 1 else 0
@@ -7,6 +9,7 @@ module Day03 =
     let puzzle1 set =
         let totalCount = set |> Seq.length
         set 
+        |> Seq.ofArray
         |> Seq.map (fun s -> s|>Seq.map toInt)
         |> Seq.transpose
         |> Seq.map Seq.sum
@@ -36,10 +39,13 @@ module Day03 =
     let binToDec (s:string) = 
         (s, (0,1))
         ||> Seq.foldBack(fun c (d, p) -> d + (c|>toInt)*p, p*2)
-        ||> fun a _ -> a
+        |> fst
 
     let puzzle2 set =
-        set 
+        set
+        |> Seq.ofArray
         |> Seq.map (fun s -> s|>Seq.map toInt)
         |> fun a -> (calcAndAppend a "" 1), (calcAndAppend a "" 0)
         ||> fun oxy co2 -> (oxy|>binToDec) * (co2|>binToDec)
+
+    let Solution = new Solution(3, puzzle1, puzzle2)

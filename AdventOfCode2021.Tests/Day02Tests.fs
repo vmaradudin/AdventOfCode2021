@@ -5,7 +5,14 @@ open AdventOfCode2021.Day02
 
 module Day02Tests =
 
-    let testInput = [|"forward 5"; "down 5"; "forward 8"; "up 3"; "down 8"; "forward 2"|] |> Seq.ofArray
+    let testInput = [|
+            "forward 5"
+            "down 5"
+            "forward 8"
+            "up 3"
+            "down 8"
+            "forward 2"
+            |]
     
     [<Fact>]
     let ``Day 2 Puzzle 1`` () =

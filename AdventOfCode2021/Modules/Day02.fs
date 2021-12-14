@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode2021
 
 open System.Text.RegularExpressions
+open Common.Types
 
 module Day02 =
     type Movement =
@@ -21,7 +22,7 @@ module Day02 =
 
     let puzzle1 seq =
         seq 
-        |> Seq.map map 
+        |> Array.map map 
         |> fun s -> ((0,0), s) 
         ||> Seq.fold (fun (x,y) mov ->
             match mov with
@@ -32,7 +33,7 @@ module Day02 =
 
     let puzzle2 seq =
         seq
-        |> Seq.map map
+        |> Array.map map
         |> fun s -> ((0,0,0), s)
         ||> Seq.fold(fun (x,y,a) mov ->
             match mov with
@@ -40,3 +41,5 @@ module Day02 =
             |Up u -> x, y, a - u
             |Forward f -> x + f, y + f * a, a)
         |||> fun x y _ -> x * y
+
+    let Solution = new Solution(2, puzzle1, puzzle2)

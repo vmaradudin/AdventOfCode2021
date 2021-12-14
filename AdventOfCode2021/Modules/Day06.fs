@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode2021
 
 open System
+open Common.Types
 
 module Day06 =
 
@@ -23,14 +24,18 @@ module Day06 =
             | x when x = endOfLife -> s
             | _ -> liveDay s nextDay endOfLife
 
-    let puzzle1 line =
-        line 
+    let puzzle1 lines =
+        lines
+        |> Array.head
         |> setupDay0
         |> fun s -> liveDay s 0 80
         |> Seq.sum
 
-    let puzzle2 line =
-        line 
+    let puzzle2 lines =
+        lines
+        |> Array.head
         |> setupDay0
         |> fun s -> liveDay s 0 256
         |> Seq.sum
+
+    let Solution = new Solution(6, puzzle1, puzzle2)

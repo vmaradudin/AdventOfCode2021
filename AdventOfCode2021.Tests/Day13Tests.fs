@@ -31,12 +31,13 @@ module Day13Tests =
     
     [<Fact>]
     let ``Day 13 Puzzle 1`` () =
-        Assert.Equal(17, puzzle1 testInput)
+        Assert.Equal("17", puzzle1 testInput)
         
     
     [<Fact>]
     let ``Day 13 Puzzle 2`` () =
-        let expected ="#####
+        let expected ="
+#####
 #   #
 #   #
 #   #

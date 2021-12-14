@@ -2,12 +2,16 @@
 
 open System
 open Common.Tools
+open Common.Types
 
 module Day12 =
 
     let setup (lines:string[]) =
         lines
-         |> Seq.map (fun c -> c.Split("-", StringSplitOptions.RemoveEmptyEntries)|> fun a -> ((a|>Seq.head), (a|>Seq.last))) 
+        |> Seq.map (fun c -> c.Split("-", StringSplitOptions.RemoveEmptyEntries)|> fun a -> ((a|>Seq.head), (a|>Seq.last)))
+        |> Seq.map (fun (s,e) -> [(e,s);(s,e)])
+        |> Seq.collect id
+        |> Seq.filter (fun (s,e) -> e <> "start" && s<>"end")
 
     let computePathStep existingChain caveMap smallCaveCondition=
         let lastNode = 
@@ -49,11 +53,8 @@ module Day12 =
     let pathCount input smallCaveCondition =
         input
         |> setup
-        |> Seq.map (fun (s,e) -> [(e,s);(s,e)])
-        |> Seq.collect id
-        |> Seq.filter (fun (s,e) -> e <> "start" && s<>"end")
-        |> fun caveMap -> 
-            findPath (Seq.singleton (Seq.singleton "start")) caveMap smallCaveCondition
+        |> fun caveMap -> (caveMap, smallCaveCondition)
+        ||> findPath (Seq.singleton (Seq.singleton "start")) 
         |> Seq.length
 
     let puzzle1 input =
@@ -68,3 +69,5 @@ module Day12 =
                 | true -> fun a -> a|>Seq.map fst|> Seq.contains(cave) |> not
                 | false -> fun _ -> true
         pathCount input smallCaveCondition
+    
+    let Solution = new Solution(12, puzzle1, puzzle2) 

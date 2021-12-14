@@ -2,6 +2,7 @@
 
 open System
 open Common.Tools
+open Common.Types
 
 module Day13 =
 
@@ -34,6 +35,7 @@ module Day13 =
             ||> fun array instructions -> (array, instructions|>Seq.head)
             ||> folder
             |> Seq.length
+            |> string
 
     let puzzle2 input =
             input
@@ -42,4 +44,6 @@ module Day13 =
             |> fun result -> result, (result|> Seq.maxBy fst|> fst, result|> Seq.maxBy snd|> snd)
             ||> fun result (maxX, maxY) ->
                 [|for j in 0..maxY -> [|for i in 0..maxX -> if result |> Seq.contains (i,j) then '#' else ' '|] |> String.Concat|]
-            |> fun displayLines -> String.Join(Environment.NewLine, displayLines)
+            |> fun displayLines -> Environment.NewLine + String.Join(Environment.NewLine, displayLines)
+
+    let Solution = new Solution(13, puzzle1, puzzle2) 

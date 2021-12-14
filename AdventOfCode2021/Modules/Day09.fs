@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode2021
 
 open Common.Tools
+open Common.Types
 
 module Day09 =
 
@@ -64,3 +65,5 @@ module Day09 =
         |> Seq.sortDescending
         |> Seq.take 3       
         |> Seq.fold (*) 1
+    
+    let Solution = new Solution(9, puzzle1, puzzle2) 

@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode2021
 
 open System
+open Common.Types
 
 module Day10 =
 
@@ -53,3 +54,5 @@ module Day10 =
         |> Array.map (fun a -> a|>Seq.fold (fun acc v -> acc*5L+v) 0L)
         |> Array.sort
         |> fun a -> a.[a.Length/2]
+    
+    let Solution = new Solution(10, puzzle1, puzzle2) 

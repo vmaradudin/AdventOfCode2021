@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode2021
 
 open System.Text.RegularExpressions
+open Common.Types
 
 module Day05 =
 
@@ -41,3 +42,5 @@ module Day05 =
         lines 
         |> getSections
         |> countIntersections
+    
+    let Solution = new Solution(5, puzzle1, puzzle2)

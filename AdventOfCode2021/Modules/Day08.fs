@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode2021
 
 open System
+open Common.Types
 
 module Day08 =
 
@@ -78,8 +79,8 @@ module Day08 =
             | "abcdefg" -> '8'
             | "abcdfg" -> '9'
 
-    let puzzle2 line =
-        line 
+    let puzzle2 lines =
+        lines
         |> setup
         |> Array.map(fun a -> 
             ((a|>Array.skip 11), (a|>getKey))
@@ -87,3 +88,5 @@ module Day08 =
             |> Array.map decodeDigit |> String.Concat)
         |> Seq.map int
         |> Seq.sum
+
+    let Solution = new Solution(8, puzzle1, puzzle2) 

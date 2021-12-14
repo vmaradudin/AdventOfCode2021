@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode2021
 
 open Common.Tools
+open Common.Types
 
 module Day11 =
 
@@ -63,3 +64,5 @@ module Day11 =
         input
         |> setup
         |> solution2 0
+    
+    let Solution = new Solution(11, puzzle1, puzzle2) 

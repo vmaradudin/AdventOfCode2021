@@ -5,7 +5,7 @@ open AdventOfCode2021.Day06
 
 module Day06Tests =
 
-    let testInput = "3,4,3,1,2"
+    let testInput = [|"3,4,3,1,2"|]
     
     [<Fact>]
     let ``Day 6 Puzzle 1`` () =

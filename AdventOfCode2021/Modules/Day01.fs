@@ -1,9 +1,21 @@
 ﻿namespace AdventOfCode2021
 
+open Common.Types
+
 module Day01 =
-
-    let compute (a:int, b:int) = if a < b then 1 else 0
     
-    let puzzle1 seq = seq |> Seq.pairwise |> Seq.map compute |> Seq.sum 
+    let calculate windowSize (array:string[])=
+        array
+        |> Seq.map int
+        |> Seq.windowed windowSize
+        |> Seq.map Array.sum
+        |> Seq.pairwise
+        |> Seq.countBy(fun (a,b) -> a<b)
+        |> Seq.find fst
+        |> snd
 
-    let puzzle2 seq = seq |> Seq.windowed 3 |> Seq.map Array.sum |> puzzle1
+    let puzzle1 input = input |> calculate 1
+
+    let puzzle2 input = input |> calculate 3
+
+    let Solution = new Solution(1, puzzle1, puzzle2)
