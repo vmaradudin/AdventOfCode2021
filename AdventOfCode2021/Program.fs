@@ -20,5 +20,6 @@ Day13.Solution
 Day14.Solution
 Day15.Solution
 Day16.Solution
+Day17.Solution
 |]
 |> Array.iter (fun a -> a.Execute)
