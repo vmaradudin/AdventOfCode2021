@@ -25,6 +25,8 @@
     <Compile Include="Modules\Day16.fs" />
     <Compile Include="Modules\Day17.fs" />
     <Compile Include="Modules\Day18.fs" />
+    <Compile Include="Modules\Day19.fs" />
+    <Compile Include="Modules\Day20.fs" />
     <Compile Include="Program.fs" />
     <Content Include="Inputs\Input01.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -78,6 +80,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Inputs\Input18.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inputs\Input19.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inputs\Input20.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
