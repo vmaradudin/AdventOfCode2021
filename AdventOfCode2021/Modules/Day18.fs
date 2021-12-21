@@ -155,4 +155,4 @@ module Day18 =
             |> Array.map(fun (v1, v2) -> (sum v1 v2) |> parseSnailfishNumber |> magnitute)
             |> Array.max
         
-    let Solution = new Solution(18, puzzle1, puzzle2)
+    let Solution = (new Solution(18, puzzle1, puzzle2) :> ISolution).Execute

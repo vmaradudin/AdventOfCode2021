@@ -26,4 +26,4 @@ module Day07 =
             |> Seq.map (fun v -> (0,s) ||> Seq.fold (fun sum v1 -> sum + ((seq{1..abs(v1 - v)}|> Seq.sum)))) 
         |> Seq.min
 
-    let Solution = Solution(7, puzzle1, puzzle2) 
+    let Solution = (Solution(7, puzzle1, puzzle2)  :> ISolution).Execute

@@ -4,7 +4,7 @@ open Common
 [<EntryPoint>]
 
 [|
-Day01.Solution :> Types.ISolution
+Day01.Solution
 Day02.Solution
 Day03.Solution
 Day04.Solution
@@ -24,5 +24,6 @@ Day17.Solution
 Day18.Solution
 Day19.Solution
 Day20.Solution
+Day21.Solution
 |]
-|> Array.iter (fun a -> a.Execute)
+|> Array.iter id

@@ -65,4 +65,4 @@ module Day11 =
         |> setup
         |> solution2 0
     
-    let Solution = new Solution(11, puzzle1, puzzle2) 
+    let Solution = (new Solution(11, puzzle1, puzzle2)  :> ISolution).Execute

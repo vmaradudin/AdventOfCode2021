@@ -42,4 +42,4 @@ module Day02 =
             |Forward f -> x + f, y + f * a, a)
         |||> fun x y _ -> x * y
 
-    let Solution = new Solution(2, puzzle1, puzzle2)
+    let Solution = (new Solution(2, puzzle1, puzzle2) :> ISolution).Execute

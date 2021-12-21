@@ -68,4 +68,4 @@ module Day04 =
         ||> fun cards step -> (cards |> Seq.find (fun c -> c |> snd) |> fst |> fst), step
         ||> fun winnerCard step -> (calculateSum winnerCard) * step
 
-    let Solution = new Solution(4, puzzle1, puzzle2)
+    let Solution = (new Solution(4, puzzle1, puzzle2) :> ISolution).Execute

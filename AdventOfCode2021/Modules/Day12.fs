@@ -70,4 +70,4 @@ module Day12 =
                 | false -> fun _ -> true
         pathCount input smallCaveCondition
     
-    let Solution = new Solution(12, puzzle1, puzzle2) 
+    let Solution = (new Solution(12, puzzle1, puzzle2)  :> ISolution).Execute

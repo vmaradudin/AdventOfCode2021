@@ -56,4 +56,4 @@ module Day17 =
            |> Seq.distinct
            |> Seq.length
         
-    let Solution = new Solution(17, puzzle1, puzzle2)
+    let Solution = (new Solution(17, puzzle1, puzzle2) :> ISolution).Execute

@@ -48,4 +48,4 @@ module Day03 =
         |> fun a -> (calcAndAppend a "" 1), (calcAndAppend a "" 0)
         ||> fun oxy co2 -> (oxy|>binToDec) * (co2|>binToDec)
 
-    let Solution = new Solution(3, puzzle1, puzzle2)
+    let Solution = (new Solution(3, puzzle1, puzzle2) :> ISolution).Execute

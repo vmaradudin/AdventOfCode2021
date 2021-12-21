@@ -137,4 +137,4 @@ module Day19 =
 
         scannersMD
         
-    let Solution = new Solution(19, puzzle1, puzzle2)
+    let Solution = (new Solution(19, puzzle1, puzzle2) :> ISolution).Execute

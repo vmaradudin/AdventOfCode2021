@@ -66,4 +66,4 @@ module Day09 =
         |> Seq.take 3       
         |> Seq.fold (*) 1
     
-    let Solution = new Solution(9, puzzle1, puzzle2) 
+    let Solution = (new Solution(9, puzzle1, puzzle2)  :> ISolution).Execute

@@ -38,4 +38,4 @@ module Day06 =
         |> fun s -> liveDay s 0 256
         |> Seq.sum
 
-    let Solution = new Solution(6, puzzle1, puzzle2)
+    let Solution = (new Solution(6, puzzle1, puzzle2) :> ISolution).Execute

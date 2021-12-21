@@ -24,7 +24,7 @@ module Types =
         new (day:int, puzzle1: string[] -> string, puzzle2: string[] -> string) = new Solution(execute day puzzle1 puzzle2)
         new (day:int, puzzle1: string[] -> int, puzzle2: string[] -> string) = new Solution(execute day puzzle1 puzzle2)
         new (day:int, puzzle1: string[] -> string, puzzle2: string[] -> int) = new Solution(execute day puzzle1 puzzle2)
-
+        
 module Tools =
     let flatten array = 
         seq {for x in 0..((Array2D.length1 array)-1) -> array[x,*]}

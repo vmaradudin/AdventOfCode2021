@@ -18,4 +18,4 @@ module Day01 =
 
     let puzzle2 input = input |> calculate 3
 
-    let Solution = new Solution(1, puzzle1, puzzle2)
+    let Solution = (new Solution(1, puzzle1, puzzle2) :> ISolution).Execute

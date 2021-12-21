@@ -46,4 +46,4 @@ module Day13 =
                 [|for j in 0..maxY -> [|for i in 0..maxX -> if result |> Seq.contains (i,j) then '#' else ' '|] |> String.Concat|]
             |> fun displayLines -> Environment.NewLine + String.Join(Environment.NewLine, displayLines)
 
-    let Solution = new Solution(13, puzzle1, puzzle2) 
+    let Solution = (new Solution(13, puzzle1, puzzle2)  :> ISolution).Execute

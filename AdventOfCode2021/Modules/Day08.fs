@@ -89,4 +89,4 @@ module Day08 =
         |> Seq.map int
         |> Seq.sum
 
-    let Solution = new Solution(8, puzzle1, puzzle2) 
+    let Solution = (new Solution(8, puzzle1, puzzle2)  :> ISolution).Execute

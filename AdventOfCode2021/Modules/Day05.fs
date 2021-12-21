@@ -43,4 +43,4 @@ module Day05 =
         |> getSections
         |> countIntersections
     
-    let Solution = new Solution(5, puzzle1, puzzle2)
+    let Solution = (new Solution(5, puzzle1, puzzle2) :> ISolution).Execute

@@ -79,4 +79,4 @@ module Day20 =
         |> String.Concat
         |> fun s -> s.Replace(".","").Length
         
-    let Solution = new Solution(20, puzzle1, puzzle2)
+    let Solution = (new Solution(20, puzzle1, puzzle2) :> ISolution).Execute

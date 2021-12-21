@@ -111,4 +111,4 @@ module Day16 =
             |> decode
             |> calculate
         
-    let Solution = new Solution(16, puzzle1, puzzle2)
+    let Solution = (new Solution(16, puzzle1, puzzle2) :> ISolution).Execute

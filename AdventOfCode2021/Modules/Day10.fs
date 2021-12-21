@@ -55,4 +55,4 @@ module Day10 =
         |> Array.sort
         |> fun a -> a.[a.Length/2]
     
-    let Solution = new Solution(10, puzzle1, puzzle2) 
+    let Solution = (new Solution(10, puzzle1, puzzle2)  :> ISolution).Execute

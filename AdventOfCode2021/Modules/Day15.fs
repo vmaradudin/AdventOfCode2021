@@ -83,4 +83,4 @@ module Day15 =
         |> setup 5
         |> findPath
 
-    let Solution = new Solution(15, puzzle1, puzzle2)
+    let Solution = (new Solution(15, puzzle1, puzzle2) :> ISolution).Execute
